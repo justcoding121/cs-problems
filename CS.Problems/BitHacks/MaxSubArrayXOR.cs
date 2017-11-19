@@ -1,11 +1,12 @@
-﻿using Advanced.Algorithms.DataStructures;
+﻿
+using Advanced.Algorithms.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// Problem details below

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.DynamicProgramming.Maximizing
+namespace CS.Problems.DynamicProgramming.Maximizing
 {
     /// <summary>
     /// Problem details below

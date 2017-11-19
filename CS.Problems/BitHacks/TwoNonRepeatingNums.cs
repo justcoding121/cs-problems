@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// Given an array in which all numbers except two are repeated once.

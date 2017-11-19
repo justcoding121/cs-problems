@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Advanced.Algorithms.DynamicProgramming
+namespace CS.Problems.DynamicProgramming
 {
     public class PalindromeInfo
     {

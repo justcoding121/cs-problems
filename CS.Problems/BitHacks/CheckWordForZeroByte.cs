@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// checks if any 8-bit byte in 32-bit word is 0

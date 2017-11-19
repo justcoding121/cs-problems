@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.DynamicProgramming.Minimizing;
+﻿using CS.Problems.DynamicProgramming.Minimizing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming.Minimizing
+namespace CS.Problems.Tests.DynamicProgramming.Minimizing
 {
     /// <summary>
     /// Problem statement below

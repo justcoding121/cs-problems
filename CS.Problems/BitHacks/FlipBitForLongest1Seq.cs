@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// You hvae an integer and you can flip exactly one bit from 0 to 1. Write code  
@@ -13,7 +13,7 @@ namespace Advanced.Algorithms.BitAlgorithms
     /// </summary>
     public class FlipBitForLongest1Seq
     {
-        internal static int Find(int x)
+        public static int Find(int x)
         {
             if(x == 0)
             {

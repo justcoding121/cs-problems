@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.DynamicProgramming.Palindrome
+namespace CS.Problems.DynamicProgramming.Palindrome
 {
     /// <summary>
     /// Problem statement here

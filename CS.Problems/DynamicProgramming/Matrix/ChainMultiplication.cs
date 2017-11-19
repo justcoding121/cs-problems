@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Advanced.Algorithms.DynamicProgramming.Matrix
+namespace CS.Problems.DynamicProgramming.Matrix
 {
     /// <summary>
     /// Problem statement here

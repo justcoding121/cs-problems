@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net40;netstandard1.0</TargetFrameworks>
+    <RootNamespace>CS.Problems</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>StrongNameKey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BitHacks\MaxSubArrayXOR.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Advanced.Algorithms" Version="0.0.128-beta" />
+  </ItemGroup>
+
+</Project>

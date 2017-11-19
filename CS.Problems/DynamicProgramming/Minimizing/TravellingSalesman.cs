@@ -1,11 +1,12 @@
-﻿using Advanced.Algorithms.DataStructures.Graph.AdjacencyList;
+﻿
+using Advanced.Algorithms.DataStructures.Graph.AdjacencyList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.DynamicProgramming
+namespace CS.Problems.DynamicProgramming
 {
     /// <summary>
     /// Problem details below

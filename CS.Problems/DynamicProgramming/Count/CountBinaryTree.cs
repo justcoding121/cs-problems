@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Advanced.Algorithms.DynamicProgramming.Count
+namespace CS.Problems.DynamicProgramming.Count
 {
     /// <summary>
     /// Problem statement below

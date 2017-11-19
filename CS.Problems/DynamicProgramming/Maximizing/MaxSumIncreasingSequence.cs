@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Advanced.Algorithms.DynamicProgramming
+namespace CS.Problems.DynamicProgramming
 {
     /// <summary>
     /// Problem statement in detail below

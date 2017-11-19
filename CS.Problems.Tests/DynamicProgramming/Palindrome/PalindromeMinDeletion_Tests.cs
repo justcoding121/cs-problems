@@ -1,8 +1,8 @@
-﻿using Advanced.Algorithms.DynamicProgramming.Palindrome;
+﻿using CS.Problems.DynamicProgramming.Palindrome;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming.Palindrome
+namespace CS.Problems.Tests.DynamicProgramming.Palindrome
 {
     /// <summary>
     /// Problem statement here

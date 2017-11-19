@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Advanced.Algorithms.DynamicProgramming.Sum
+namespace CS.Problems.DynamicProgramming.Sum
 {
     /// <summary>
     /// Problem statement

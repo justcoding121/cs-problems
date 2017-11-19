@@ -1,5 +1,5 @@
 ﻿using Advanced.Algorithms.DataStructures.Graph.AdjacencyList;
-using Advanced.Algorithms.DynamicProgramming;
+using CS.Problems.DynamicProgramming;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests
+namespace CS.Problems.Tests
 {
     /// <summary>
     /// Problem details below

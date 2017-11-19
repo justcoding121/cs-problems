@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Advanced.Algorithms.DynamicProgramming.Count
+namespace CS.Problems.DynamicProgramming.Count
 {
     public class DigitCounter
     {

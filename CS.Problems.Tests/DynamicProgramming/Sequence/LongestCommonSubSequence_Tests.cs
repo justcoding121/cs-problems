@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Advanced.Algorithms.DynamicProgramming
+namespace CS.Problems.DynamicProgramming
 {
     /// <summary>
     /// Problem statement in detail below

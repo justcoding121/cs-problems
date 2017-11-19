@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.Sorting;
+﻿using CS.Problems.Sorting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.Sorting
+namespace CS.Problems.Tests.Sorting
 {
     [TestClass]
     public class ZigZag_Tests

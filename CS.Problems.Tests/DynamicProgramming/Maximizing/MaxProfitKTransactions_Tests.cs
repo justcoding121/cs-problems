@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.DynamicProgramming.Maximizing;
+﻿using CS.Problems.DynamicProgramming.Maximizing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming.Maximizing
+namespace CS.Problems.Tests.DynamicProgramming.Maximizing
 {
     /// <summary>
     /// Problem details below

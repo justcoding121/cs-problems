@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// A number is Sparse if there are no two adjacent 1s in its binary representation. 

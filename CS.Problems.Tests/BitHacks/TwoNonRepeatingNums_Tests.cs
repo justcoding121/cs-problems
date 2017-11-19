@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.BitAlgorithms;
+﻿using CS.Problems.BitAlgorithms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.BitAlgorithms
+namespace CS.Problems.Tests.BitAlgorithms
 {
     /// <summary>
     /// Problem details below

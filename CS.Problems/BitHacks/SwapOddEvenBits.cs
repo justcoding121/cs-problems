@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Advanced.Algorithms.BitAlgorithms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// Swap consecutive odd and even bits from right

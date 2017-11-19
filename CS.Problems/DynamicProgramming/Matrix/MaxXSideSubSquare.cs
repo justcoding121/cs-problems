@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Advanced.Algorithms.DynamicProgramming.Matrix
+namespace CS.Problems.DynamicProgramming.Matrix
 {
     /// <summary>
     /// Problem statement below

@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.DynamicProgramming.Matrix;
+﻿using CS.Problems.DynamicProgramming.Matrix;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming.Matrix
+namespace CS.Problems.Tests.DynamicProgramming.Matrix
 {
     /// <summary>
     /// Problem statement here

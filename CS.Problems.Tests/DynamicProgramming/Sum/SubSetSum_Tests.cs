@@ -1,7 +1,7 @@
-﻿using Advanced.Algorithms.DynamicProgramming.Sum;
+﻿using CS.Problems.DynamicProgramming.Sum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming.Sum
+namespace CS.Problems.Tests.DynamicProgramming.Sum
 {
     /// <summary>
     /// Problem statement

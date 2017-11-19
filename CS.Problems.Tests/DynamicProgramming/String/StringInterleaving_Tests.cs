@@ -1,11 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Advanced.Algorithms;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming
+namespace CS.Problems.Tests.DynamicProgramming
 {
     [TestClass]
     public class StringInterleaving_Tests

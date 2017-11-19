@@ -1,7 +1,7 @@
-﻿using Advanced.Algorithms.DynamicProgramming.Matrix;
+﻿using CS.Problems.DynamicProgramming.Matrix;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming.Matrix
+namespace CS.Problems.Tests.DynamicProgramming.Matrix
 {
     /// <summary>
     /// Problem statement below

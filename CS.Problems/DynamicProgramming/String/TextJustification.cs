@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.DynamicProgramming
+namespace CS.Problems.DynamicProgramming
 {
     /// <summary>
     /// problem details below

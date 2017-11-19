@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.DynamicProgramming;
+﻿using CS.Problems.DynamicProgramming;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming
+namespace CS.Problems.Tests.DynamicProgramming
 {
     [TestClass]
     public class WordBreak_Tests

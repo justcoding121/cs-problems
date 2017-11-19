@@ -1,4 +1,4 @@
-﻿using Advanced.Algorithms.Miscellaneous;
+﻿using CS.Problems.Miscellaneous;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.Tests.Miscellaneous
+namespace CS.Problems.Tests.Miscellaneous
 {
     [TestClass]
     public class BalanceParentheses_Tests

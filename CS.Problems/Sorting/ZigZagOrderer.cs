@@ -1,4 +1,4 @@
-﻿namespace Advanced.Algorithms.Sorting
+﻿namespace CS.Problems.Sorting
 {
     /// <summary>
     /// Problem statement below

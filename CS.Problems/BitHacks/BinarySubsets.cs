@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     /// <summary>
     /// Generating all the binary subsets of an integer
@@ -13,7 +13,7 @@ namespace Advanced.Algorithms.BitAlgorithms
     /// </summary>
     public class BinarySubsets
     {
-        internal static List<int> GetSubsets(int n)
+        public static List<int> GetSubsets(int n)
         {
             var result = new List<int>();
 

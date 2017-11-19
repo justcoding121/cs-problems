@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Advanced.Algorithms.DynamicProgramming;
+using CS.Problems.DynamicProgramming;
 using System.Collections.Generic;
 
-namespace Advanced.Algorithms.Tests.DynamicProgramming
+namespace CS.Problems.Tests.DynamicProgramming
 {
     /// <summary>
     /// Problem statement in detail below

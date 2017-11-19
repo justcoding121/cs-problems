@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advanced.Algorithms.BitAlgorithms
+namespace CS.Problems.BitAlgorithms
 {
     // Interleave bits of x and y, so that all of the
     // bits of x are in the even positions and y in the odd;
     // z gets the resulting Morton Number
     public class InterleaveBits
     {
-        internal static int Interleave(int x, int y)
+        public static int Interleave(int x, int y)
         {
             var result = 0;
 
