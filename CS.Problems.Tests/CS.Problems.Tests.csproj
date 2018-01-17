@@ -113,7 +113,6 @@
     <Compile Include="DynamicProgramming\Minimizing\MinArrayJumps_Tests.cs" />
     <Compile Include="DynamicProgramming\Minimizing\MinEditDistance_Tests.cs" />
     <Compile Include="DynamicProgramming\Minimizing\MinEggDrop_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\TravellingSalesman_Tests.cs" />
     <Compile Include="DynamicProgramming\OptimalBST_Tests.cs" />
     <Compile Include="DynamicProgramming\OptimalGameStrategy_Tests.cs" />
     <Compile Include="DynamicProgramming\Palindrome\LongestPalindrome_Tests.cs" />
