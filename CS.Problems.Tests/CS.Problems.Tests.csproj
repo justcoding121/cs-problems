@@ -111,6 +111,7 @@
     <Compile Include="DynamicProgramming\Minimizing\AssemblyLineScheduling_Tests.cs" />
     <Compile Include="DynamicProgramming\Minimizing\CoinChangeProblems_Tests.cs" />
     <Compile Include="DynamicProgramming\Minimizing\MinArrayJumps_Tests.cs" />
+    <Compile Include="DynamicProgramming\Minimizing\MinAdjustmentCost_Tests.cs" />
     <Compile Include="DynamicProgramming\Minimizing\MinEditDistance_Tests.cs" />
     <Compile Include="DynamicProgramming\Minimizing\MinEggDrop_Tests.cs" />
     <Compile Include="DynamicProgramming\OptimalBST_Tests.cs" />

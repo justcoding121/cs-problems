@@ -53,6 +53,7 @@ All are top down solutions with memoization technique.
 - [X] Min Egg drop problem ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/DynamicProgramming/Minimizing/MinEggDrop.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/DynamicProgramming/Minimizing/MinEggDrop_Tests.cs))
 - [X] Min edit distance ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/DynamicProgramming/Minimizing/MinEditDistance.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/DynamicProgramming/Minimizing/MinEditDistance_Tests.cs))
 - [X] Min array jumps ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/DynamicProgramming/Minimizing/MinArrayJumps.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/DynamicProgramming/Minimizing/MinArrayJumps_Tests.cs))
+- [X] Min adjustment cost ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/DynamicProgramming/Minimizing/MinAdjustmentCost.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/DynamicProgramming/Minimizing/MinAdjustmentCost_Tests.cs))
 
 #### Palindrome
 
