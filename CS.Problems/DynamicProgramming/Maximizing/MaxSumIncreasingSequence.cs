@@ -28,10 +28,6 @@ namespace CS.Problems.DynamicProgramming
         private static int FindMaxSum(int[] input,
             int j, ref int netMax, Dictionary<int, int> cache)
         {
-            if (j == 0)
-            {
-                return input[0];
-            }
 
             if (cache.ContainsKey(j))
             {
@@ -46,11 +42,12 @@ namespace CS.Problems.DynamicProgramming
 
                 //if values at j > i (increasing sequence)
                 //And if subMax of values from (0, 1, .., i) + value at j is better
-                if(input[i] < input[j]
-                    && input[j] + subMax > currentMax)
+                if (input[i] < input[j])    
                 {
-                    currentMax = input[j] + subMax;
+                    currentMax = Math.Max(currentMax, Math.Max(subMax, subMax + input[j]));
                 }
+
+               
             }
 
             netMax = Math.Max(netMax, currentMax);
