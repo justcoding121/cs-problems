@@ -133,6 +133,7 @@
     <Compile Include="DynamicProgramming\TowerOfHanoi_Tests.cs" />
     <Compile Include="Miscellaneous\BalanceParentheses_Tests.cs" />
     <Compile Include="Miscellaneous\CountInversions_Tests.cs" />
+    <Compile Include="Miscellaneous\LongestOnesWithKFlips_Tests.cs" />
     <Compile Include="Sorting\ZigZag_Tests.cs" />
   </ItemGroup>
   <ItemGroup>

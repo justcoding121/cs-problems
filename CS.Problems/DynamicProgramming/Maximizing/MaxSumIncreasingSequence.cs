@@ -46,8 +46,7 @@ namespace CS.Problems.DynamicProgramming
                 {
                     currentMax = Math.Max(currentMax, Math.Max(subMax, subMax + input[j]));
                 }
-
-               
+      
             }
 
             netMax = Math.Max(netMax, currentMax);

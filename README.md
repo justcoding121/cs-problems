@@ -113,3 +113,4 @@ All are top down solutions with memoization technique.
 
 - [X] Count Inversions ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/CountInversions.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/CountInversions_Tests.cs))
 - [X] Balanced Parentheses ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/BalanceParentheses.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/BalanceParentheses_Tests.cs))
+- [X] Max ones with K flips ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/LongestOnesWithKFlips.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/LongestOnesWithKFlips_Tests.cs))
