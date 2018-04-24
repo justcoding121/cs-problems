@@ -38,6 +38,14 @@ namespace CS.Problems.DynamicProgramming.Matrix
                 return 0;
             }
 
+            var cacheKey = string.Concat(x1, y1, x2, y2);
+
+            if (cache.ContainsKey(cacheKey))
+            {
+                return cache[cacheKey];
+            }
+
+
             //sub matrix sums
             var results = new List<int>();
 
