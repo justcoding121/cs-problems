@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="BitHacks\MaxSubArrayXOR.cs" />
+    <Compile Remove="BitManipulation\MaxSubArrayXOR.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Advanced.Algorithms" Version="0.0.128-beta" />
+    <PackageReference Include="Advanced.Algorithms" Version="0.0.242-beta" />
   </ItemGroup>
 
 </Project>

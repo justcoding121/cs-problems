@@ -42,9 +42,6 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Advanced.Algorithms, Version=0.0.128.0, Culture=neutral, PublicKeyToken=3624930dfed32d05, processorArchitecture=MSIL">
-      <HintPath>..\packages\Advanced.Algorithms.0.0.128-beta\lib\net40\Advanced.Algorithms.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -60,29 +57,36 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BitHacks\AbsValue_Tests.cs" />
-    <Compile Include="BitHacks\AddOne_Tests.cs" />
-    <Compile Include="BitHacks\AddTwoNumbers_Tests.cs" />
-    <Compile Include="BitHacks\BinarySubsets_Tests.cs" />
-    <Compile Include="BitHacks\BoolArrayPuzzle_Tests.cs" />
-    <Compile Include="BitHacks\CheckWordForZerobyte_Tests.cs" />
-    <Compile Include="BitHacks\FindUniqueElement_Tests.cs" />
-    <Compile Include="BitHacks\FlipBitForLongest1Seq_Tests.cs" />
-    <Compile Include="BitHacks\InterleaveBits_Tests.cs" />
-    <Compile Include="BitHacks\MagicNumber_Tests.cs" />
-    <Compile Include="BitHacks\MinMaxOfTwoIntegers_Tests.cs" />
-    <Compile Include="BitHacks\NextNumberWithSameSetBits_Tests.cs" />
-    <Compile Include="BitHacks\NextSparseNumber_Tests.cs" />
-    <Compile Include="BitHacks\ParityFinder_Tests.cs" />
-    <Compile Include="BitHacks\ReverseBits_Tests.cs" />
-    <Compile Include="BitHacks\SetBitsBigArray_Tests.cs" />
-    <Compile Include="BitHacks\SetBits_Tests.cs" />
-    <Compile Include="BitHacks\SumBitDiff_Tests.cs" />
-    <Compile Include="BitHacks\SwapBits_Tests.cs" />
-    <Compile Include="BitHacks\SwapOddEvenBits_Tests.cs" />
-    <Compile Include="BitHacks\SwapWithoutTemp_Tests.cs" />
-    <Compile Include="BitHacks\TwoNonRepeatingNums_Tests.cs" />
-    <Compile Include="BitHacks\TwoRepeatingNums_Tests.cs" />
+    <Compile Include="BitManipulation\AbsValue_Tests.cs" />
+    <Compile Include="BitManipulation\AddOne_Tests.cs" />
+    <Compile Include="BitManipulation\AddTwoNumbers_Tests.cs" />
+    <Compile Include="BitManipulation\BinarySubsets_Tests.cs" />
+    <Compile Include="BitManipulation\BitHacks_Tests.cs" />
+    <Compile Include="BitManipulation\BoolArrayPuzzle_Tests.cs" />
+    <Compile Include="BitManipulation\CheckWordForZerobyte_Tests.cs" />
+    <Compile Include="BitManipulation\DivisionModulus_Tests.cs" />
+    <Compile Include="BitManipulation\FindUniqueElement_Tests.cs" />
+    <Compile Include="BitManipulation\FlipBitForLongest1Seq_Tests.cs" />
+    <Compile Include="BitManipulation\InterleaveBits_Tests.cs" />
+    <Compile Include="BitManipulation\IntToBinary_Tests.cs" />
+    <Compile Include="BitManipulation\IsMultipleOfNine_Tests.cs" />
+    <Compile Include="BitManipulation\IsMultipleOfThree_Tests.cs" />
+    <Compile Include="BitManipulation\MagicNumber_Tests.cs" />
+    <Compile Include="BitManipulation\MinMaxOfTwoIntegers_Tests.cs" />
+    <Compile Include="BitManipulation\NextNumberWithSameSetBits_Tests.cs" />
+    <Compile Include="BitManipulation\NextPowOfTwo_Tests.cs" />
+    <Compile Include="BitManipulation\NextSparseNumber_Tests.cs" />
+    <Compile Include="BitManipulation\ParityFinder_Tests.cs" />
+    <Compile Include="BitManipulation\ReverseBits_Tests.cs" />
+    <Compile Include="BitManipulation\SetBitsBigArray_Tests.cs" />
+    <Compile Include="BitManipulation\SetBits_Tests.cs" />
+    <Compile Include="BitManipulation\SumBitDiff_Tests.cs" />
+    <Compile Include="BitManipulation\SwapBits_Tests.cs" />
+    <Compile Include="BitManipulation\SwapOddEvenBits_Tests.cs" />
+    <Compile Include="BitManipulation\SwapWithoutTemp_Tests.cs" />
+    <Compile Include="BitManipulation\ToggleCase_Tests.cs" />
+    <Compile Include="BitManipulation\TwoNonRepeatingNums_Tests.cs" />
+    <Compile Include="BitManipulation\TwoRepeatingNums_Tests.cs" />
     <Compile Include="DynamicProgramming\Count\BoolParenthesis_Tests.cs" />
     <Compile Include="DynamicProgramming\Count\CountBinaryTree_Tests.cs" />
     <Compile Include="DynamicProgramming\Count\CountDecodings_Test.cs" />
@@ -133,17 +137,19 @@
     <Compile Include="DynamicProgramming\TowerOfHanoi_Tests.cs" />
     <Compile Include="Miscellaneous\BalanceParentheses_Tests.cs" />
     <Compile Include="Miscellaneous\CountInversions_Tests.cs" />
+    <Compile Include="Miscellaneous\KthSmallest_Tests.cs" />
     <Compile Include="Miscellaneous\LongestOnesWithKFlips_Tests.cs" />
-    <Compile Include="Sorting\ZigZag_Tests.cs" />
+    <Compile Include="Miscellaneous\MatrixMultiplication_Tests.cs" />
+    <Compile Include="Miscellaneous\MedianStream_Tests.cs" />
+    <Compile Include="Miscellaneous\SearchAlmostSorted_Tests.cs" />
+    <Compile Include="Miscellaneous\SortAlmostSorted_Tests.cs" />
+    <Compile Include="Miscellaneous\ZigZag_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CS.Problems\CS.Problems.csproj">
       <Project>{0bcbf659-72a2-4f4c-a481-b40d78490c2f}</Project>
       <Name>CS.Problems</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
