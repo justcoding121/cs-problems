@@ -137,6 +137,7 @@
     <Compile Include="DynamicProgramming\TowerOfHanoi_Tests.cs" />
     <Compile Include="Miscellaneous\BalanceParentheses_Tests.cs" />
     <Compile Include="Miscellaneous\CountInversions_Tests.cs" />
+    <Compile Include="Miscellaneous\ExpressionTree_Tests.cs" />
     <Compile Include="Miscellaneous\KthSmallest_Tests.cs" />
     <Compile Include="Miscellaneous\LongestOnesWithKFlips_Tests.cs" />
     <Compile Include="Miscellaneous\MatrixMultiplication_Tests.cs" />
