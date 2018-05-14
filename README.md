@@ -1,3 +1,8 @@
+### Note:
+Please don't take effort to create pull requests for new algorithms/data structures. This is just a personal hobby and was originally not intented to be a library. Feel free fork and modify to fit your need if that's what you are looking for. You can however report issues/bugs here, I would be happy to take a look when I get time. :-)
+
+## CS Problems
+
 Some interesting computer science problems and solutions in C#
 
 ### Sorting and Searching
