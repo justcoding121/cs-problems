@@ -5,10 +5,6 @@ Please don't take effort to create pull requests for new problems/algorithms/dat
 
 Some interesting computer science problems and solutions in C#
 
-### Sorting and Searching
-
-- [X] Array in zig-zag fashion ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Sorting/ZigZagOrderer.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Sorting/ZigZag_Tests.cs))
-
 ### Classic Dynamic Programming Problems
 
 All are top down solutions with memoization technique.
@@ -131,3 +127,4 @@ All are top down solutions with memoization technique.
 - [X] Median of stream of numbers ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/MedianStream.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/MedianStream_Tests.cs))
 - [X] Kth Smallest using binary heap ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/KthSmallest.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/KthSmallest_Tests.cs))
 - [X] Expression Tree ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/ExpressionTree.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/ExpressionTree_Tests.cs))
+- [X] Array in zig-zag fashion ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems/Miscellaneous/ZigZagOrderer.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/CS.Problems.Tests/Miscellaneous/ZigZag_Tests.cs))
