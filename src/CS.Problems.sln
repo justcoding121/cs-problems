@@ -5,12 +5,12 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{38EA62D0-D2CB-465D-AF4F-407C5B4D4A1E}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Problems", "CS.Problems\CS.Problems.csproj", "{32E22D53-CECD-4E2D-ADAD-85DD79A8549F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS.Problems.Tests", "CS.Problems.Tests\CS.Problems.Tests.csproj", "{556705BD-1E64-426D-A9CA-08390156FB85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS.Problems.Tests", "..\tests\CS.Problems.Tests\CS.Problems.Tests.csproj", "{556705BD-1E64-426D-A9CA-08390156FB85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,7 +31,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {625C1EB5-44CF-47DE-A85A-B4C8C40ED90A}
 		EnterpriseLibraryConfigurationToolBinariesPath = .1.505.2\lib\NET35
+		SolutionGuid = {625C1EB5-44CF-47DE-A85A-B4C8C40ED90A}
 	EndGlobalSection
 EndGlobal
