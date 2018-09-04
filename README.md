@@ -1,6 +1,10 @@
 ### Note:
 Please don't take effort to create pull requests for new problems/algorithms/data structures. This is just a curiosity driven personal hobby and is not intented to be a library. Feel free fork and modify. You can however open issues/fix bugs with pull requests here, I would be happy to take a look when I get time.
 
+### Development environment
+
+* Visual Studio 2017
+
 ## CS Problems
 
 Some interesting computer science problems and solutions in C#
