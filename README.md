@@ -14,7 +14,7 @@ Some interesting computer science problems and solutions in C#
 All are top down solutions with memoization technique.
 
 - [X] Tower of hanoi ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/TowerOfHanoi.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/TowerOfHanoi_Tests.cs))
-- [X] Fibonacci number generator ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Fibornacci.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Fibornacci_Tests.cs))
+- [X] Fibonacci number generator ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Fibonacci.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Fibonacci_Tests.cs))
 - [X] Optimal game strategy ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/OptimalGameStrategy.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/OptimalGameStrategy_Tests.cs))
 - [X] Optimal Binary Search Tree ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/OptimalBST.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/OptimalBST_Tests.cs))
 
@@ -34,7 +34,7 @@ All are top down solutions with memoization technique.
 - [X] Dice throw ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Count/DiceThrow.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Count/DiceThrow_Tests.cs))
 - [X] Count possible binary tree from a preorder sequence ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Count/CountBinaryTree.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Count/CountBinaryTree_Tests.cs))
 - [X] Ways to cover a distance ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Count/WaysToCoverDistance.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Count/WaysToCover_Tests.cs))
-- [X] Staircase problem in Fibornacci Series ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Count/StairCaseProblem.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Count/StairCaseProblem_Tests.cs))
+- [X] Staircase problem in Fibonacci Series ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Count/StairCaseProblem.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Count/StairCaseProblem_Tests.cs))
 - [X] Count digits ([Implementation](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems/DynamicProgramming/Count/DigitCounter.cs) | [Tests](https://github.com/justcoding121/CS-Problems/blob/master/src/CS.Problems.Tests/DynamicProgramming/Count/DigitCounter_Tests.cs))
 
 #### Maximizing
