@@ -6,20 +6,20 @@ namespace CS.Problems.DynamicProgramming
     /// Problem statement in detail below
     /// http://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
     /// </summary>
-    public class FibornacciGenerator
+    public class FibonacciGenerator
     {
         /// <summary>
-        /// get Fibornacci numbers
+        /// get Fibonacci numbers
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public static List<int> GetFibornacciNumbers(int number)
+        public static List<int> GetFibonacciNumbers(int number)
         {
             var result = new List<int>();
 
             var cache = new Dictionary<int, int>();
 
-            Fibornacci(number, cache);
+            Fibonacci(number, cache);
 
             foreach (var item in cache)
             {
@@ -35,7 +35,7 @@ namespace CS.Problems.DynamicProgramming
         /// <param name="number"></param>
         /// <param name="cache"></param>
         /// <returns></returns>
-        private static int Fibornacci(int number, 
+        private static int Fibonacci(int number, 
             Dictionary<int, int> cache)
         {
             if(cache.ContainsKey(number))
@@ -49,8 +49,8 @@ namespace CS.Problems.DynamicProgramming
                 return 1;
             }
 
-            var result = Fibornacci(number - 1, cache)
-                + Fibornacci(number - 2, cache);
+            var result = Fibonacci(number - 1, cache)
+                + Fibonacci(number - 2, cache);
 
             cache.Add(number, result);
 

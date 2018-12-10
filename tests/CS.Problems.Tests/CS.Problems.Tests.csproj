@@ -94,7 +94,7 @@
     <Compile Include="DynamicProgramming\Count\DigitCounter_Tests.cs" />
     <Compile Include="DynamicProgramming\Count\StairCaseProblem_Tests.cs" />
     <Compile Include="DynamicProgramming\Count\WaysToCover_Tests.cs" />
-    <Compile Include="DynamicProgramming\Fibornacci_Tests.cs" />
+    <Compile Include="DynamicProgramming\Fibonacci_Tests.cs" />
     <Compile Include="DynamicProgramming\Matrix\ChainMultiplication_Tests.cs" />
     <Compile Include="DynamicProgramming\Matrix\MatrixMinCost_Tests.cs" />
     <Compile Include="DynamicProgramming\Matrix\Max1sRectangle_Tests.cs" />

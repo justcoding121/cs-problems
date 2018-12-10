@@ -8,12 +8,12 @@ namespace CS.Problems.Tests.DynamicProgramming
     /// http://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
     /// </summary>
     [TestClass]
-    public class Fibornacci_Tests
+    public class Fibonacci_Tests
     {
         [TestMethod]
-        public void Fibornacci_Smoke_Test()
+        public void Fibonacci_Smoke_Test()
         {
-            var numbers = FibornacciGenerator.GetFibornacciNumbers(10);
+            var numbers = FibonacciGenerator.GetFibonacciNumbers(10);
 
             Assert.AreEqual(55, numbers[9]);
         }
