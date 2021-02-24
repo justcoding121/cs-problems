@@ -1,5 +1,5 @@
 ### Note:
-Please don't take effort to create pull requests for new problems/algorithms/data structures. This is just a curiosity driven personal hobby and is not intented to be a library. Feel free fork and modify. You can however open issues/fix bugs with pull requests here, I would be happy to take a look when I get time.
+Please don't take effort to create pull requests for new problems, algorithms or data structures. This is just a curiosity driven personal hobby and is not intented to be a library. Feel free fork and modify. You can however open issues or fix bugs with pull requests, I would be happy to take a look when I get time.
 
 ### Development environment
 
