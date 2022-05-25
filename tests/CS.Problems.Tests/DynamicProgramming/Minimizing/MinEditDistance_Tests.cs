@@ -21,6 +21,9 @@ namespace CS.Problems.Tests.DynamicProgramming.Minimizing
             Assert.AreEqual(1, MinEditDistance.GetMin("geek", "gesek"));
             Assert.AreEqual(1, MinEditDistance.GetMin("cat", "cut"));
             Assert.AreEqual(3, MinEditDistance.GetMin("sunday", "saturday"));
+
+            Assert.AreEqual(3, MinEditDistance.GetMin("horse", "ros"));
+            Assert.AreEqual(5, MinEditDistance.GetMin("intention", "execution"));
         }
     }
 }

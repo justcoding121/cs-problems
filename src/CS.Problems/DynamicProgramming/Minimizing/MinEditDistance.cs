@@ -75,7 +75,9 @@ namespace CS.Problems.DynamicProgramming.Minimizing
 
                 //pick the option that given min distance 
                 //+1 for one of the current operation above
-                min = results.Min() + 1;
+                min = results.Min();
+
+                min = min != int.MaxValue ? min + 1 : int.MaxValue;
             }
 
             cache.Add(cacheKey, min);

@@ -1,182 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{556705BD-1E64-426D-A9CA-08390156FB85}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CS.Problems.Tests</RootNamespace>
-    <AssemblyName>CS.Problems.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
-    <IsCodedUITest>False</IsCodedUITest>
-    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
+    <Compile Remove="BitManipulation\MaxSubArrayXOR_Tests.cs" />
   </ItemGroup>
-  <Choose>
-    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
+
   <ItemGroup>
-    <Compile Include="BitManipulation\AbsValue_Tests.cs" />
-    <Compile Include="BitManipulation\AddOne_Tests.cs" />
-    <Compile Include="BitManipulation\AddTwoNumbers_Tests.cs" />
-    <Compile Include="BitManipulation\BinarySubsets_Tests.cs" />
-    <Compile Include="BitManipulation\BitHacks_Tests.cs" />
-    <Compile Include="BitManipulation\BoolArrayPuzzle_Tests.cs" />
-    <Compile Include="BitManipulation\CheckWordForZerobyte_Tests.cs" />
-    <Compile Include="BitManipulation\DivisionModulus_Tests.cs" />
-    <Compile Include="BitManipulation\FindUniqueElement_Tests.cs" />
-    <Compile Include="BitManipulation\FlipBitForLongest1Seq_Tests.cs" />
-    <Compile Include="BitManipulation\InterleaveBits_Tests.cs" />
-    <Compile Include="BitManipulation\IntToBinary_Tests.cs" />
-    <Compile Include="BitManipulation\IsMultipleOfNine_Tests.cs" />
-    <Compile Include="BitManipulation\IsMultipleOfThree_Tests.cs" />
-    <Compile Include="BitManipulation\MagicNumber_Tests.cs" />
-    <Compile Include="BitManipulation\MinMaxOfTwoIntegers_Tests.cs" />
-    <Compile Include="BitManipulation\NextNumberWithSameSetBits_Tests.cs" />
-    <Compile Include="BitManipulation\NextPowOfTwo_Tests.cs" />
-    <Compile Include="BitManipulation\NextSparseNumber_Tests.cs" />
-    <Compile Include="BitManipulation\ParityFinder_Tests.cs" />
-    <Compile Include="BitManipulation\ReverseBits_Tests.cs" />
-    <Compile Include="BitManipulation\SetBitsBigArray_Tests.cs" />
-    <Compile Include="BitManipulation\SetBits_Tests.cs" />
-    <Compile Include="BitManipulation\SumBitDiff_Tests.cs" />
-    <Compile Include="BitManipulation\SwapBits_Tests.cs" />
-    <Compile Include="BitManipulation\SwapOddEvenBits_Tests.cs" />
-    <Compile Include="BitManipulation\SwapWithoutTemp_Tests.cs" />
-    <Compile Include="BitManipulation\ToggleCase_Tests.cs" />
-    <Compile Include="BitManipulation\TwoNonRepeatingNums_Tests.cs" />
-    <Compile Include="BitManipulation\TwoRepeatingNums_Tests.cs" />
-    <Compile Include="DynamicProgramming\Count\BoolParenthesis_Tests.cs" />
-    <Compile Include="DynamicProgramming\Count\CountBinaryTree_Tests.cs" />
-    <Compile Include="DynamicProgramming\Count\CountDecodings_Test.cs" />
-    <Compile Include="DynamicProgramming\Count\DiceThrow_Tests.cs" />
-    <Compile Include="DynamicProgramming\Count\DigitCounter_Tests.cs" />
-    <Compile Include="DynamicProgramming\Count\StairCaseProblem_Tests.cs" />
-    <Compile Include="DynamicProgramming\Count\WaysToCover_Tests.cs" />
-    <Compile Include="DynamicProgramming\Fibonacci_Tests.cs" />
-    <Compile Include="DynamicProgramming\Matrix\ChainMultiplication_Tests.cs" />
-    <Compile Include="DynamicProgramming\Matrix\MatrixMinCost_Tests.cs" />
-    <Compile Include="DynamicProgramming\Matrix\Max1sRectangle_Tests.cs" />
-    <Compile Include="DynamicProgramming\Matrix\Max1sSquare_Tests.cs" />
-    <Compile Include="DynamicProgramming\Matrix\MaxSubMatrix_Tests.cs" />
-    <Compile Include="DynamicProgramming\Matrix\MaxXSideSubSquare_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\BoxStacking_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\BuildingBridges_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\BurstBalloon_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\CuttingRod_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\KnackSackProblems_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\LongestChain_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\MaxProfitKTransactions_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\MaxSumIncreasingSequence_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\MaxSumSequence_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\PrintMaxAs_Tests.cs" />
-    <Compile Include="DynamicProgramming\Maximizing\WeightedJobScheduling_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\AssemblyLineScheduling_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\CoinChangeProblems_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\MinArrayJumps_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\MinAdjustmentCost_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\MinEditDistance_Tests.cs" />
-    <Compile Include="DynamicProgramming\Minimizing\MinEggDrop_Tests.cs" />
-    <Compile Include="DynamicProgramming\OptimalBST_Tests.cs" />
-    <Compile Include="DynamicProgramming\OptimalGameStrategy_Tests.cs" />
-    <Compile Include="DynamicProgramming\Palindrome\LongestPalindrome_Tests.cs" />
-    <Compile Include="DynamicProgramming\Palindrome\PalindromeMinCut_Tests.cs" />
-    <Compile Include="DynamicProgramming\Palindrome\PalindromeMinDeletion_Tests.cs" />
-    <Compile Include="DynamicProgramming\Palindrome\ShortestPalindrome_Tests.cs" />
-    <Compile Include="DynamicProgramming\Sequence\BalancedPartition_Tests.cs" />
-    <Compile Include="DynamicProgramming\Sequence\DistinctBinaryString_Tests.cs" />
-    <Compile Include="DynamicProgramming\Sequence\LongestBitonicSequence_Tests.cs" />
-    <Compile Include="DynamicProgramming\Sequence\LongestCommonSubSequence_Tests.cs" />
-    <Compile Include="DynamicProgramming\Sequence\LongestIncreasingSubSequence_Tests.cs" />
-    <Compile Include="DynamicProgramming\String\StringInterleaving_Tests.cs" />
-    <Compile Include="DynamicProgramming\String\TextJustification_Tests.cs" />
-    <Compile Include="DynamicProgramming\String\WildCardMatching_Tests.cs" />
-    <Compile Include="DynamicProgramming\String\WordBreak_Tests.cs" />
-    <Compile Include="DynamicProgramming\Sum\SubSetSum_Tests.cs" />
-    <Compile Include="DynamicProgramming\TowerOfHanoi_Tests.cs" />
-    <Compile Include="Miscellaneous\BalanceParentheses_Tests.cs" />
-    <Compile Include="Miscellaneous\CountInversions_Tests.cs" />
-    <Compile Include="Miscellaneous\ExpressionTree_Tests.cs" />
-    <Compile Include="Miscellaneous\KthSmallest_Tests.cs" />
-    <Compile Include="Miscellaneous\LongestOnesWithKFlips_Tests.cs" />
-    <Compile Include="Miscellaneous\MatrixMultiplication_Tests.cs" />
-    <Compile Include="Miscellaneous\MedianStream_Tests.cs" />
-    <Compile Include="Miscellaneous\SearchAlmostSorted_Tests.cs" />
-    <Compile Include="Miscellaneous\SortAlmostSorted_Tests.cs" />
-    <Compile Include="Miscellaneous\ZigZag_Tests.cs" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
+    <PackageReference Include="coverlet.collector" Version="3.1.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CS.Problems\CS.Problems.csproj">
-      <Project>{32e22d53-cecd-4e2d-adad-85dd79a8549f}</Project>
-      <Name>CS.Problems</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\..\src\CS.Problems\CS.Problems.csproj" />
   </ItemGroup>
-  <Choose>
-    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-      </ItemGroup>
-    </When>
-  </Choose>
-  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

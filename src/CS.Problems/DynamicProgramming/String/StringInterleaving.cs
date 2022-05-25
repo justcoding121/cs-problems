@@ -14,6 +14,9 @@ namespace CS.Problems
     {
         public static bool IsInterleaved(string a, string b, string c)
         {
+            if (a.Length + b.Length != c.Length)
+                return false;
+
             return IsInterleaved(a, b, c, 
                 a.Length - 1, b.Length - 1, c.Length - 1,
                 new Dictionary<string, bool>());

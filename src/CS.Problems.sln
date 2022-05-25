@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{38EA62D0-D2CB-465D-AF4F-407C5B4D4A1E}"
 	ProjectSection(SolutionItems) = preProject
@@ -31,7 +31,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = .1.505.2\lib\NET35
 		SolutionGuid = {625C1EB5-44CF-47DE-A85A-B4C8C40ED90A}
+		EnterpriseLibraryConfigurationToolBinariesPath = .1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal
