@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CS.Problems.DynamicProgramming
 {
@@ -9,28 +10,30 @@ namespace CS.Problems.DynamicProgramming
     /// </summary>
     public class LongestIncreasingSubSequence
     {
-        public static int FindSequence(int[] input)
+        public int FindSequence(int[] input)
         {
-            var maxLength = 0;
+            if (input.Length <= 1)
+                return input.Length;
 
-            FindSequence(input, input.Length - 1,
-                ref maxLength, new Dictionary<int, int>());
+            var cache = new Dictionary<int, int>();
 
-            return maxLength;
+            findSequence(input, input.Length - 1, cache);
+
+            return cache.Select(x => x.Value).Max();
         }
 
-        private static int FindSequence(int[] input, int j, 
-            ref int netLongest,
-            Dictionary<int, int> cache)
+        private int findSequence(int[] input, int j,
+         Dictionary<int, int> cache)
         {
-            if (j == 0)
-            {
-                return 1;
-            }
-
-            if(cache.ContainsKey(j))
+            if (cache.ContainsKey(j))
             {
                 return cache[j];
+            }
+
+            if (j == 0)
+            {
+                cache.Add(j, 1);
+                return 1;
             }
 
             var currentLongest = 1;
@@ -38,18 +41,15 @@ namespace CS.Problems.DynamicProgramming
             for (int i = 0; i < j; i++)
             {
                 //from 0 to i
-                var subLongest = FindSequence(input, i, ref netLongest, cache);
+                var subLongest = findSequence(input, i, cache);
 
                 //if 0 to i sequence last value (i) is less than current value j
                 //And if it improves our current Longest
-                if (input[i] < input[j]
-                    && currentLongest < subLongest + 1)
+                if (input[i] < input[j])
                 {
-                    currentLongest = subLongest + 1;
+                    currentLongest = Math.Max(currentLongest, subLongest + 1);
                 }
             }
-
-            netLongest = Math.Max(netLongest, currentLongest);
 
             cache.Add(j, currentLongest);
 
