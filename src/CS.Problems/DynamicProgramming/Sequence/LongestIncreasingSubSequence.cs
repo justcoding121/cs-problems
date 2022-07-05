@@ -19,12 +19,6 @@ namespace CS.Problems.DynamicProgramming
             return maxLength;
         }
 
-        /// <summary>
-        /// DP top down
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="i"></param>
-        /// <returns></returns>
         private static int FindSequence(int[] input, int j, 
             ref int netLongest,
             Dictionary<int, int> cache)
@@ -48,7 +42,7 @@ namespace CS.Problems.DynamicProgramming
 
                 //if 0 to i sequence last value (i) is less than current value j
                 //And if it improves our current Longest
-                if (input[i] <= input[j]
+                if (input[i] < input[j]
                     && currentLongest < subLongest + 1)
                 {
                     currentLongest = subLongest + 1;

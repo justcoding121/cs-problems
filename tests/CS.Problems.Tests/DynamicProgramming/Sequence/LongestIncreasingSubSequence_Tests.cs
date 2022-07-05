@@ -13,6 +13,9 @@ namespace CS.Problems.Tests.DynamicProgramming
         [TestMethod]
         public void LongestIncreasingSubSequence_Smoke_Test()
         {
+            Assert.AreEqual(1,
+              LongestIncreasingSubSequence.FindSequence(new int[] { 7,7,7,7 }));
+
             Assert.AreEqual(6, 
                 LongestIncreasingSubSequence.FindSequence(new int[] { 15, 27, 14, 38, 26, 55, 46, 65, 85 }));
 
