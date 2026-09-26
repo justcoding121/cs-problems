@@ -36,6 +36,7 @@ namespace CS.Problems.DynamicProgramming
         {
             if (j == 0)
             {
+                netLongest = Math.Max(netLongest, 1);
                 return 1;
             }
 
@@ -50,7 +51,7 @@ namespace CS.Problems.DynamicProgramming
             {
                 var subLongest = LIS(input, i, ref netLongest, cache);
 
-                if (input[i].Item1 <= input[j].Item1
+                if (input[i].Item1 < input[j].Item1
                     && longest < subLongest + 1)
                 {
                     longest = subLongest + 1;

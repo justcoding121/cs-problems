@@ -23,6 +23,9 @@ namespace CS.Problems.Tests.DynamicProgramming
                 new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                 new int[] { 5, 1, 8, 3, 4, 2, 6, 7 }
                 ));
+
+            Assert.AreEqual(1, BuildingBridges
+                .GetMaxBridges(new int[] { 1 }, new int[] { 2 }));
         }
     }
 }
