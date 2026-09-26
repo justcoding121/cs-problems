@@ -19,7 +19,7 @@ namespace CS.Problems.BitManipulation
             //if x has a bit set in any byte 
             //it will cause the msb to be set during addition with mask
             //so result will be zero at the end
-            return ~(((x & mask) + mask | mask)) != 0;
+            return ~((((x & mask) + mask) | x) | mask) != 0;
 
             //Examples below
 

@@ -19,6 +19,7 @@ namespace CS.Problems.Tests.BitManipulation
         {
             Assert.IsTrue(CheckWordForZeroByte.HasZeroBytes(1));
             Assert.IsFalse(CheckWordForZeroByte.HasZeroBytes(int.MaxValue));
+            Assert.IsFalse(CheckWordForZeroByte.HasZeroBytes(unchecked((int)0x80808080)));
         }
     }
 }
