@@ -21,29 +21,15 @@ namespace CS.Problems.DynamicProgramming.Minimizing
             int i, int j,
             Dictionary<string, int> cache)
         {
-            //this means our edits from right to left 
-            //caused string lenths to not match
-            //so return max value for edit 
-            //(which means this search path is not a viable option)
-            if (i < 0 || j < 0)
+            // remaining characters on the other string must be inserted/deleted
+            if (i < 0)
             {
-                return int.MaxValue;
+                return j + 1;
             }
 
-            //base case
-            //string lengths are matching
-            if (i == j && i == 0)
+            if (j < 0)
             {
-                //nothing to edit
-                if (a[i] == b[j])
-                {
-                    return 0;
-                }
-                else
-                {
-                    //do a replace operation
-                    return 1;
-                }
+                return i + 1;
             }
 
             var cacheKey = $"{i}-{j}";
@@ -75,9 +61,7 @@ namespace CS.Problems.DynamicProgramming.Minimizing
 
                 //pick the option that given min distance 
                 //+1 for one of the current operation above
-                min = results.Min();
-
-                min = min != int.MaxValue ? min + 1 : int.MaxValue;
+                min = results.Min() + 1;
             }
 
             cache.Add(cacheKey, min);
