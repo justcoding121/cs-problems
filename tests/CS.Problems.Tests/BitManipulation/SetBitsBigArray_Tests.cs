@@ -26,7 +26,7 @@ namespace CS.Problems.Tests.BitManipulation
                 input.Add(i);
             }
 
-            Assert.AreEqual(130560, SetBitsBigArray.CountSetBits(input.ToArray()));
+            Assert.AreEqual(524288, SetBitsBigArray.CountSetBits(input.ToArray()));
         }
     }
 }

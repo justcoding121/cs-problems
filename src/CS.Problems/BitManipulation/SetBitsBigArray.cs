@@ -58,12 +58,11 @@ namespace CS.Problems.BitManipulation
         private static int getOnesCount(int i)
         {
             var bitCount = 0;
-            var mask = 1;
 
-            while((i & mask) == 1)
+            while (i != 0)
             {
                 bitCount++;
-                i >>= 1;
+                i &= (i - 1);
             }
 
             return bitCount;
