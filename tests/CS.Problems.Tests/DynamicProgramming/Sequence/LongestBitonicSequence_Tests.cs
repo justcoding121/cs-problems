@@ -30,6 +30,9 @@ namespace CS.Problems.Tests.DynamicProgramming.Sequence
             Assert.AreEqual(7, LongestBitonicSubSequence
                 .FindSequence(new int[] {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5,
               13, 3, 11, 7, 15}));
+
+            Assert.AreEqual(6, LongestBitonicSubSequence
+                .FindSequence(new int[] { 1, 3, 5, 4, 2, 0 }));
         }
     }
 }

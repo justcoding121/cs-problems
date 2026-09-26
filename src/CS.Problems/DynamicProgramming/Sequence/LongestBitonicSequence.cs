@@ -51,7 +51,7 @@ namespace CS.Problems.DynamicProgramming
             ref int netLongest,
             Dictionary<int, int> cache)
         {
-            if (j == 1)
+            if (j == 0)
             {
                 return 1;
             }
