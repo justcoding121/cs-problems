@@ -27,6 +27,10 @@ namespace CS.Problems.Tests.DynamicProgramming.Count
             Assert.AreEqual(280, DigitCounter.Count(898, 6));
 
             Assert.AreEqual(910116681, DigitCounter.Count(1015242410, 6));
+
+            Assert.AreEqual(2, DigitCounter.Count(25, 6));
+            Assert.AreEqual(3, DigitCounter.Count(20, 0));
+            Assert.AreEqual(2, DigitCounter.Count(10, 0));
         }
     }
 }
