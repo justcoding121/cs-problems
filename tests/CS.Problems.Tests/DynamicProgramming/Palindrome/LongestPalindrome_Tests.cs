@@ -33,10 +33,13 @@ namespace CS.Problems.Tests.DynamicProgramming
             Assert.IsTrue(length == 9);
 
             length = longestPalindrome.FindPalindrome("abaxabaxabybaxabyb");
-            Assert.IsTrue(length == 11);
+            Assert.IsTrue(length == 13);
 
             length = longestPalindrome.FindPalindrome("abaxabaxabbaxabyb");
-            Assert.IsTrue(length == 10);
+            Assert.IsTrue(length == 13);
+
+            length = longestPalindrome.FindPalindrome("BBABCBCAB");
+            Assert.IsTrue(length == 7);
         }
     }
 }

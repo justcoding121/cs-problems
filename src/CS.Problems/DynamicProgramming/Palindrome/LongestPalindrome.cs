@@ -46,15 +46,7 @@ namespace CS.Problems.DynamicProgramming
 
             if (input[i] == input[j])
             {
-                longestLengthA = FindLongestPalindrome(input, i + 1, j - 1, cache); 
-
-                //for continuity, verify that
-                //expected palindrome length between i & j match
-                //palindrome length
-                if (longestLengthA + 1 == j - i)
-                {
-                    longestLengthA = longestLengthA + 2;
-                }
+                longestLengthA = FindLongestPalindrome(input, i + 1, j - 1, cache) + 2;
             }
 
             var longestLengthB = FindLongestPalindrome(input, i, j - 1, cache);
