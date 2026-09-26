@@ -49,6 +49,7 @@ namespace CS.Problems.DynamicProgramming
         {
             if (j == 0)
             {
+                netMax = Math.Max(netMax, jobs[j].Weight);
                 return jobs[j].Weight;
             }
 
@@ -57,7 +58,8 @@ namespace CS.Problems.DynamicProgramming
                 return cache[j];
             }
 
-            var localMax = 0;
+            // at least take this job alone
+            var localMax = jobs[j].Weight;
 
             for (int i = 0; i < j; i++)
             {

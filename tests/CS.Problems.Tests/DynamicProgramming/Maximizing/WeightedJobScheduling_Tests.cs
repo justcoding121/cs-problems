@@ -25,6 +25,13 @@ namespace CS.Problems.Tests.DynamicProgramming
                 new WeightedJob(new int[] {6, 19, 100}),
                 new WeightedJob(new int[] {2, 100, 200})
             }));
+
+            Assert.AreEqual(100, WeightedJobScheduling.GetMaxProfit(new List<WeightedJob>()
+            {
+                new WeightedJob(new int[] {1, 10, 100}),
+                new WeightedJob(new int[] {2, 9, 1}),
+                new WeightedJob(new int[] {3, 8, 1})
+            }));
         }
     }
 }
