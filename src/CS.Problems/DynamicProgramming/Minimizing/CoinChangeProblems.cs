@@ -13,19 +13,21 @@ namespace CS.Problems.DynamicProgramming
         //O(amount * n) with memoization
         public static int MinCoinChangeRecursive(int amount, int n, int[] coins, Dictionary<int, int> memoizingCache)
         {
+            if (amount == 0)
+            {
+                return 0;
+            }
+
+            if (amount < 0 || n <= 0)
+            {
+                return -1;
+            }
+
             var key = amount;
 
             if (memoizingCache.ContainsKey(key))
             {
                 return memoizingCache[key];
-            }
-
-            int result;
-
-            //no coins to pick from
-            if (amount <= 0 || n < 0)
-            {
-                result = 0;
             }
 
             var min = int.MaxValue;
@@ -35,21 +37,16 @@ namespace CS.Problems.DynamicProgramming
                 //if this coin size is greater than the sum skip it; no use of this coin
                 if (coins[j] <= amount)
                 {
-                    var prevMin = MinCoinChangeRecursive(amount - coins[j], n, coins, memoizingCache) + 1;
+                    var prevMin = MinCoinChangeRecursive(amount - coins[j], n, coins, memoizingCache);
 
-                    if (min > prevMin)
+                    if (prevMin >= 0 && prevMin + 1 < min)
                     {
-                        min = prevMin;
+                        min = prevMin + 1;
                     }
                 }
             }
 
-            if (min == int.MaxValue)
-            {
-                min = 0;
-            }
-
-            result = min;
+            var result = min == int.MaxValue ? -1 : min;
 
             memoizingCache.Add(key, result);
 
@@ -61,8 +58,18 @@ namespace CS.Problems.DynamicProgramming
 
         //O(amount * n^n) without memoization?
         //O(amount * n) with memoization
-        private static int MaxCoinChangeRecursive(int amount, int n, int[] coins, Dictionary<int, int> memoizingCache)
+        public static int MaxCoinChangeRecursive(int amount, int n, int[] coins, Dictionary<int, int> memoizingCache)
         {
+            if (amount == 0)
+            {
+                return 0;
+            }
+
+            if (amount < 0 || n <= 0)
+            {
+                return -1;
+            }
+
             var key = amount;
 
             if (memoizingCache.ContainsKey(key))
@@ -70,35 +77,25 @@ namespace CS.Problems.DynamicProgramming
                 return memoizingCache[key];
             }
 
-            int result;
-
-            //no coins to pick from
-            if (amount <= 0 || n < 0)
-            {
-                result = 0;
-            }
-
-            var max = 0;
+            var max = -1;
 
             for (int j = 0; j < n; j++)
             {
                 //if this coin size is greater than the sum skip it; no use of this coin
                 if (coins[j] <= amount)
                 {
-                    var prevMax = MaxCoinChangeRecursive(amount - coins[j], n, coins, memoizingCache) + 1;
+                    var prevMax = MaxCoinChangeRecursive(amount - coins[j], n, coins, memoizingCache);
 
-                    if (max < prevMax)
+                    if (prevMax >= 0 && prevMax + 1 > max)
                     {
-                        max = prevMax;
+                        max = prevMax + 1;
                     }
                 }
             }
 
-            result = max;
+            memoizingCache.Add(key, max);
 
-            memoizingCache.Add(key, result);
-
-            return result;
+            return max;
 
         }
     }

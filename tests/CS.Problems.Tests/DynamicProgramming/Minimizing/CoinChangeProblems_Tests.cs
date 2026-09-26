@@ -23,6 +23,8 @@ namespace CS.Problems.Tests.DynamicProgramming
             var result = CoinChangeProblems.MinCoinChangeRecursive(amount, coins.Length, coins, new Dictionary<int, int>());
 
             Assert.AreEqual(result, 2);
+
+            Assert.AreEqual(-1, CoinChangeProblems.MinCoinChangeRecursive(3, 2, new int[] { 2, 4 }, new Dictionary<int, int>()));
         }
 
 
@@ -35,9 +37,9 @@ namespace CS.Problems.Tests.DynamicProgramming
             int[] coins = { 1, 2, 3 };
             int amount = 29;
 
-            var result = CoinChangeProblems.MinCoinChangeRecursive(amount, coins.Length, coins, new Dictionary<int, int>());
+            var result = CoinChangeProblems.MaxCoinChangeRecursive(amount, coins.Length, coins, new Dictionary<int, int>());
 
-            Assert.AreEqual(result, 10);
+            Assert.AreEqual(result, 29);
         }
     }
 }
