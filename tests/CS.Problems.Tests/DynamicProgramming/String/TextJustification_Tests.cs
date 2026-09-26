@@ -18,6 +18,9 @@ namespace CS.Problems.Tests.DynamicProgramming
                 { "Ramanu", "Dog", "likes", "to", "code"}, 10);
 
             Assert.AreEqual(26, sumOfSquaresOfBlankSpaceEndingsInEachLine);
+
+            Assert.AreEqual(0, TextJustification.GetJustification(
+                new List<string>() { "a", "b" }, 3));
         }
     }
 }

@@ -50,7 +50,7 @@ namespace CS.Problems.DynamicProgramming
 
             //just simulate breaking lines between every word
             //or group of words that will fit in current line
-            for (int i = nextWordIndex; i > 0 && totalCharacterWidthInCurrentLine < maxLineWidth; i--)
+            for (int i = nextWordIndex; i >= 0 && totalCharacterWidthInCurrentLine < maxLineWidth; i--)
             {
                 totalWordsInCurrentLine++;
                 totalCharacterWidthInCurrentLine += words[i].Length;
@@ -61,8 +61,15 @@ namespace CS.Problems.DynamicProgramming
                 var emptyEndSpaceWidthOnCurrentLine = (maxLineWidth - totalCharacterWidthInCurrentLine)
                     - (totalWordsInCurrentLine - 1);
 
-                //previos optimal result
-                var prevLineMin = GetJustification(words, maxLineWidth, i - 1, cache);
+                if (emptyEndSpaceWidthOnCurrentLine < 0)
+                {
+                    break;
+                }
+
+                //previous optimal result (0 when this line starts at the first word)
+                var prevLineMin = i == 0
+                    ? 0
+                    : GetJustification(words, maxLineWidth, i - 1, cache);
 
                 //use squares/or cubes of empty space lengths at the end of the line
                 //to amplify the spaces in each line
