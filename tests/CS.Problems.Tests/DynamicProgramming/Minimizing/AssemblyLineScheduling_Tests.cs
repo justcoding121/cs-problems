@@ -28,6 +28,13 @@ namespace CS.Problems.Tests.DynamicProgramming
             },
              new int[] { 10, 12 },
              new int[] { 18, 7 }));
+
+            // prefer line B when entry A is expensive and exit A is expensive
+            Assert.AreEqual(13, AssemblyLineScheduling.GetMinTime(
+                new int[2][] { new int[] { 9, 9 }, new int[] { 1, 1 } },
+                new int[2][] { new int[] { 0, 50 }, new int[] { 0, 50 } },
+                new int[] { 1, 10 },
+                new int[] { 100, 1 }));
         }
     }
 }

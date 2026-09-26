@@ -21,15 +21,15 @@ namespace CS.Problems.DynamicProgramming
 
             return Math.Min(MinTimeStationA(stationTime[0], stationTime[1],
                                             crossingTime[0], crossingTime[1],
-                                            entryTime[0], entryTime[1],
-                                            exitTime[0], exitTime[1],
+                                            entryTime[0], exitTime[0],
+                                            entryTime[1], exitTime[1],
                                             stations - 1, stations, cache),
 
                            MinTimeStationB(stationTime[0], stationTime[1],
                                             crossingTime[0], crossingTime[1],
-                                             entryTime[0], entryTime[1],
-                                            exitTime[0], exitTime[1]
-                                            , stations - 1, stations, cache)
+                                            entryTime[0], exitTime[0],
+                                            entryTime[1], exitTime[1],
+                                            stations - 1, stations, cache)
                                            );
         }
 
@@ -55,23 +55,23 @@ namespace CS.Problems.DynamicProgramming
 
             var prevMinA = MinTimeStationA(stationATime, stationBTime,
                                 AB_crossingTime, BA_crossingTime,
-                                entryTimeA, entryTimeB,
-                                exitTimeA, exitTimeB,
+                                entryTimeA, exitTimeA,
+                                entryTimeB, exitTimeB,
                                 currentStation - 1, totalStations, cache)
                                 + stationATime[currentStation];
 
             var prevMinB = MinTimeStationB(stationATime, stationBTime,
                                 AB_crossingTime, BA_crossingTime,
-                                entryTimeA, entryTimeB,
-                                exitTimeA, exitTimeB,
+                                entryTimeA, exitTimeA,
+                                entryTimeB, exitTimeB,
                                 currentStation - 1, totalStations, cache)
                                 + BA_crossingTime[currentStation] + stationATime[currentStation];
 
-            //last station
+            //last station — finishing on line A uses exit A
             if (currentStation == totalStations - 1)
             {
                 prevMinA += exitTimeA;
-                prevMinB += exitTimeB;
+                prevMinB += exitTimeA;
             }
 
             var min = Math.Min(prevMinA, prevMinB);
@@ -102,22 +102,22 @@ namespace CS.Problems.DynamicProgramming
 
             var prevMinB = MinTimeStationB(stationATime, stationBTime,
                                 AB_crossingTime, BA_crossingTime,
-                                entryTimeA, entryTimeB,
-                                exitTimeA, exitTimeB,
+                                entryTimeA, exitTimeA,
+                                entryTimeB, exitTimeB,
                                 currentStation - 1, totalStations, cache)
                                 + stationBTime[currentStation];
 
             var prevMinA = MinTimeStationA(stationATime, stationBTime,
                                 AB_crossingTime, BA_crossingTime,
-                                entryTimeA, entryTimeB,
-                                exitTimeA, exitTimeB,
+                                entryTimeA, exitTimeA,
+                                entryTimeB, exitTimeB,
                                 currentStation - 1, totalStations, cache)
                                 + AB_crossingTime[currentStation] + stationBTime[currentStation];
 
-            //last station
+            //last station — finishing on line B uses exit B
             if (currentStation == totalStations - 1)
             {
-                prevMinA += exitTimeA;
+                prevMinA += exitTimeB;
                 prevMinB += exitTimeB;
             }
 
