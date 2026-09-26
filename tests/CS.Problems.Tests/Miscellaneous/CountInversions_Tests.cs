@@ -27,6 +27,8 @@ namespace CS.Problems.Tests.Miscellaneous
 
             arr = new int[] { 12, 11, 13, 5, 6, 7 };
             Assert.AreEqual(10, CountInversions.Count(arr));
+
+            Assert.AreEqual(0, CountInversions.Count(new int[] { 1, 1 }));
         }
     }
 }

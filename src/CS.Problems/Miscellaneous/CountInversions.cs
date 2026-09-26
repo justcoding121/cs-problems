@@ -38,7 +38,7 @@ namespace CS.Problems.Miscellaneous
 
             while (i <= mid && j <= right)
             {
-                if (arr[i] < arr[j])
+                if (arr[i] <= arr[j])
                 {
                     mergeResult.Add(arr[i++]);
                 }
