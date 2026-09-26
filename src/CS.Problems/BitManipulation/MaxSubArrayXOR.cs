@@ -1,9 +1,7 @@
 ﻿
-using Advanced.Algorithms.DataStructures;
 using System;
-using System.Linq;
 
-namespace CS.Problems.BitAlgorithms
+namespace CS.Problems.BitManipulation
 {
     /// <summary>
     /// Problem details below
@@ -11,83 +9,72 @@ namespace CS.Problems.BitAlgorithms
     /// </summary>
     public class MaxSubArrayXOR
     {
+        private class BitTrieNode
+        {
+            public BitTrieNode[] Children = new BitTrieNode[2];
+        }
+
         public static int FindMax(int[] x)
         {
-            var trie = new Trie<bool>();
+            var root = new BitTrieNode();
 
             //init with zero
-            trie.Insert(ToBoolArray(0));
+            Insert(root, 0);
 
             var max = int.MinValue;
-            var prefixMax = 0;
+            var prefixXor = 0;
 
             for (int i = 0; i < x.Length; i++)
             {
-                //update current prefixMax
-                prefixMax = prefixMax ^ x[i];
-                
-                //insert prefix max to trie
-                trie.Insert(ToBoolArray(prefixMax));
-
-                //query max sub array from trie and update
-                max = Math.Max(max, QueryMax(trie, prefixMax));
+                prefixXor = prefixXor ^ x[i];
+                Insert(root, prefixXor);
+                max = Math.Max(max, QueryMax(root, prefixXor));
             }
 
             return max;
         }
 
-        /// <summary>
-        /// Returns the maximum sum with all sub array within the given prefix max
-        /// </summary>
-        /// <param name="trie"></param>
-        /// <param name="prefixMax"></param>
-        /// <returns></returns>
-        private static int QueryMax(Trie<bool> trie, int prefixMax)
+        private static void Insert(BitTrieNode root, int value)
         {
-            var prefixArray = ToBoolArray(prefixMax);
-            var prevMax = new bool[32];
+            var current = root;
 
-            var currentNode = trie.Root;
-
-            for (int i = 0; i < 32; i++)
+            for (int i = 31; i >= 0; i--)
             {
-                //our goal is to maximize sub array xor
-                //xor is maxed when bits differ; so dig down to opposite bit
-                if (currentNode.Children.ContainsKey(!prefixArray[i]))
+                var bit = (value >> i) & 1;
+                if (current.Children[bit] == null)
                 {
-                    currentNode = currentNode.Children[!prefixArray[i]];
-                    prevMax[i] = !prefixArray[i];
+                    current.Children[bit] = new BitTrieNode();
                 }
-                //else just dig down on same bit
+                current = current.Children[bit];
+            }
+        }
+
+        /// <summary>
+        /// Returns the maximum subarray XOR ending at the current prefix.
+        /// </summary>
+        private static int QueryMax(BitTrieNode root, int prefixXor)
+        {
+            var current = root;
+            var partner = 0;
+
+            for (int i = 31; i >= 0; i--)
+            {
+                var bit = (prefixXor >> i) & 1;
+                var opposite = bit ^ 1;
+
+                if (current.Children[opposite] != null)
+                {
+                    partner |= (opposite << i);
+                    current = current.Children[opposite];
+                }
                 else
                 {
-                    currentNode = currentNode.Children[prefixArray[i]];
-                    prevMax[i] = prefixArray[i];
+                    partner |= (bit << i);
+                    current = current.Children[bit];
                 }
             }
 
-            return prefixMax ^ ToInt(prevMax);
-        }
-
-        /// <summary>
-        /// returns a bool array of size 32 (int to binary)
-        /// corresponding to 32 bit length of x
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
-        private static bool[] ToBoolArray(int x)
-        {
-            return Convert.ToString(x, 2).PadLeft(32, '0').ToCharArray().Select(s => s.Equals('1')).ToArray();
-        }
-
-        /// <summary>
-        /// returns int from a bool array of size 32
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
-        private static int ToInt(bool[] x)
-        {
-            return Convert.ToInt32(new string(x.Select(y => y ? '1' : '0').ToArray()), 2);
+            return prefixXor ^ partner;
         }
     }
 }

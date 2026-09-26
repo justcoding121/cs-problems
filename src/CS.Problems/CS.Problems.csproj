@@ -11,10 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="BitManipulation\MaxSubArrayXOR.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Advanced.Algorithms" Version="0.0.242-beta" />
   </ItemGroup>
 
