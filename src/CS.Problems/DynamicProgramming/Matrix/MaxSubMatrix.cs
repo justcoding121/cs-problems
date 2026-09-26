@@ -35,10 +35,11 @@ namespace CS.Problems.DynamicProgramming.Matrix
             if (y1 > y2
                 || x1 > x2)
             {
-                return 0;
+                // empty range is not a candidate rectangle
+                return int.MinValue;
             }
 
-            var cacheKey = string.Concat(x1, y1, x2, y2);
+            var cacheKey = $"max-{x1}-{y1}-{x2}-{y2}";
 
             if (cache.ContainsKey(cacheKey))
             {
@@ -64,7 +65,9 @@ namespace CS.Problems.DynamicProgramming.Matrix
             var sum = GetSum(matrix, x1, y1, x2, y2, cache);
 
             //update max sum
-            return Math.Max(sum, results.Max());
+            var max = Math.Max(sum, results.Max());
+            cache.Add(cacheKey, max);
+            return max;
 
         }
 
@@ -87,7 +90,7 @@ namespace CS.Problems.DynamicProgramming.Matrix
                 return matrix[x1, y1];
             }
 
-            var cacheKey = string.Concat(x1, y1, x2, y2);
+            var cacheKey = $"sum-{x1}-{y1}-{x2}-{y2}";
 
             if(cache.ContainsKey(cacheKey))
             {

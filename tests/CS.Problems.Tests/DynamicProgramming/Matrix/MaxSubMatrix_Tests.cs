@@ -24,6 +24,8 @@ namespace CS.Problems.Tests.DynamicProgramming.Matrix
                 .FindMaxSubMatrixSum(testMatrix);
 
             Assert.AreEqual(29, result);
+
+            Assert.AreEqual(-5, MaxSubMatrix.FindMaxSubMatrixSum(new int[1, 1] { { -5 } }));
         }
     }
 }
