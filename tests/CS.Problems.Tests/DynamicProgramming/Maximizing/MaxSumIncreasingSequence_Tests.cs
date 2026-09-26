@@ -37,6 +37,9 @@ namespace CS.Problems.Tests.DynamicProgramming
 
             Assert.AreEqual(603, MaxSumIncreasingSequence
              .FindSum(new int[] { 601, 3, 600 }));
+
+            Assert.AreEqual(-1, MaxSumIncreasingSequence
+             .FindSum(new int[] { -2, -5, -1 }));
         }
     }
 }

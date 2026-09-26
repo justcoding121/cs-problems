@@ -11,7 +11,7 @@ namespace CS.Problems.DynamicProgramming
     {
         public static int FindSum(int[] input)
         {
-            var netMax = 0;
+            var netMax = input[0];
 
             var result = FindMaxSum(input, input.Length - 1, ref netMax, new Dictionary<int, int>());
 
