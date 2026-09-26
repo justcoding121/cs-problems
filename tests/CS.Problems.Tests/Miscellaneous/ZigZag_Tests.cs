@@ -14,6 +14,9 @@ namespace CS.Problems.Tests.Miscellaneous
         {
             var result = ZigZagOrderer.Order(testArray);
             CollectionAssert.AreEqual(new int[] { 3, 7, 4, 8, 2, 6, 1, }, result);
+
+            CollectionAssert.AreEqual(new int[] { 1, 3, 2 },
+                ZigZagOrderer.Order(new int[] { 1, 2, 3 }));
         }
     }
 }

@@ -10,7 +10,7 @@
         {
             var currentOrderIsAsc = true;
 
-            for (int i = 0; i < input.Length - 2; i++)
+            for (int i = 0; i < input.Length - 1; i++)
             {
                 if(currentOrderIsAsc)
                 {
