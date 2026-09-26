@@ -28,9 +28,14 @@ namespace CS.Problems.Tests.DynamicProgramming
                 new int[] { 34, 8, 50 }
                 ));
 
-            Assert.AreEqual(415, OptimalBST.FindOptimalCost(
+            Assert.AreEqual(404, OptimalBST.FindOptimalCost(
               new int[] { 10, 12, 20, 12, 15, 18 },
               new int[] { 34, 8, 50, 23, 50, 31 }
+              ));
+
+            Assert.AreEqual(123, OptimalBST.FindOptimalCost(
+              new int[] { 1, 2, 3 },
+              new int[] { 100, 1, 10 }
               ));
         }
     }

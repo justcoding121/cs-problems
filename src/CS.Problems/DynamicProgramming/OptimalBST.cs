@@ -41,7 +41,7 @@ namespace CS.Problems.DynamicProgramming
 
             for (int i = left; i <= right; i++)
             {
-                min = Math.Min(min, FindOptimalCost(freq, 0, i - 1, level + 1, cache)
+                min = Math.Min(min, FindOptimalCost(freq, left, i - 1, level + 1, cache)
                       + FindOptimalCost(freq, i + 1, right, level + 1, cache) + (freq[i] * level));
             }
 
