@@ -23,7 +23,7 @@ namespace CS.Problems.BitManipulation
         /// <returns></returns>
         public static bool IsPowerOf2(int x)
         {
-            return (x & (x - 1)) == 0;
+            return (x & (x - 1)) == 0 && x > 0;
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace CS.Problems.BitManipulation
         public static bool IsSet(int x, int n)
         {
             var mask = 1 << n;
-            return (x & mask) > 0;
+            return (x & mask) != 0;
         }
 
         /// <summary>

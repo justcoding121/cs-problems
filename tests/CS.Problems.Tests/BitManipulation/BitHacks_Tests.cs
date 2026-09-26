@@ -30,6 +30,7 @@ namespace CS.Problems.Tests.Binary
         {
             Assert.IsTrue(BitHacks.IsPowerOf2(32));
             Assert.IsFalse(BitHacks.IsPowerOf2(22));
+            Assert.IsFalse(BitHacks.IsPowerOf2(0));
         }
 
         /// <summary>
@@ -60,6 +61,7 @@ namespace CS.Problems.Tests.Binary
             var binaryString = "1100";
             Assert.IsTrue(BitHacks.IsSet(Convert.ToInt32(binaryString, 2), 2));
             Assert.IsFalse(BitHacks.IsSet(Convert.ToInt32(binaryString, 2), 1));
+            Assert.IsTrue(BitHacks.IsSet(int.MinValue, 31));
         }
 
         /// <summary>
