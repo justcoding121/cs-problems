@@ -14,7 +14,7 @@ namespace CS.Problems.Miscellaneous
 
             for (int i = 0; i < a.Length; i++)
             {
-                max = Math.Max(max, Compute(a.ToCharArray(), k, a.Length - 1));
+                max = Math.Max(max, Compute(a.ToCharArray(), k, i));
             }
 
             return max;

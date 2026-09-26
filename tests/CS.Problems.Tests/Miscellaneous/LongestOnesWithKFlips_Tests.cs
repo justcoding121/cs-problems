@@ -22,12 +22,14 @@ namespace CS.Problems.Tests.Miscellaneous
             Assert.AreEqual(8, LongestOnesWithKFlips.ComputeRecursive("10011010111", 2));
             Assert.AreEqual(5, LongestOnesWithKFlips.ComputeRecursive("10011010111", 1));
             Assert.AreEqual(4, LongestOnesWithKFlips.ComputeRecursive("0001", 4));
+            Assert.AreEqual(3, LongestOnesWithKFlips.ComputeRecursive("01110", 0));
 
             //Iterative solution tests
             Assert.AreEqual(7, LongestOnesWithKFlips.ComputeIterative("11001100111", 2));
             Assert.AreEqual(8, LongestOnesWithKFlips.ComputeIterative("10011010111", 2));
             Assert.AreEqual(5, LongestOnesWithKFlips.ComputeIterative("10011010111", 1));
             Assert.AreEqual(4, LongestOnesWithKFlips.ComputeIterative("0001", 4));
+            Assert.AreEqual(3, LongestOnesWithKFlips.ComputeIterative("01110", 0));
 
         }
     }
