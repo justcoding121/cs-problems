@@ -16,6 +16,10 @@ namespace CS.Problems.Tests.Binary
 
             Assert.AreEqual(false, IsMultipleOfNine.IsTrue(91));
             Assert.AreEqual(false, IsMultipleOfNine.IsTrue(102));
+
+            Assert.AreEqual(true, IsMultipleOfNine.IsTrue(0));
+            Assert.AreEqual(true, IsMultipleOfNine.IsTrue(18));
+            Assert.AreEqual(true, IsMultipleOfNine.IsTrue(27));
         }
     }
 }

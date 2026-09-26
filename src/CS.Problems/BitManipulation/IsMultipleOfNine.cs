@@ -12,7 +12,12 @@
         //where, k = N/8 = N>>3 and r = N % 8 = N&7
         public static bool IsTrue(int x)
         {
-            if (x == 9)
+            if (x < 0)
+            {
+                x = -x;
+            }
+
+            if (x == 0 || x == 9)
             {
                 return true;
             }
