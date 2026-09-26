@@ -31,6 +31,8 @@ namespace CS.Problems.Tests.DynamicProgramming
 
             Assert.IsFalse(WildCardMatching.IsMatch("aab", "c*a*b"));
 
+            Assert.IsTrue(WildCardMatching.IsMatch("a", "a*"));
+            Assert.IsTrue(WildCardMatching.IsMatch("a", "a**"));
         }
     }
 }

@@ -47,8 +47,18 @@ namespace CS.Problems.DynamicProgramming
                 return true;
             }
 
-            if (tIndex == text.Length 
-                || pIndex == pattern.Length)
+            if (tIndex == text.Length)
+            {
+                // leftover pattern may still match empty text via '*'
+                while (pIndex < pattern.Length && pattern[pIndex] == '*')
+                {
+                    pIndex++;
+                }
+
+                return pIndex == pattern.Length;
+            }
+
+            if (pIndex == pattern.Length)
             {
                 return false;
             }
