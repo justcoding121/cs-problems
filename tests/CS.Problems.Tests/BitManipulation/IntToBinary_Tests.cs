@@ -12,6 +12,7 @@ namespace CS.Problems.Tests.Binary
         {
           Assert.AreEqual("00000001", IntToBinary.GetBinary(1, 8));
           Assert.AreEqual("11111111", IntToBinary.GetBinary(-1, 8));
+          Assert.AreEqual("00000110", IntToBinary.GetBinary(6, 8));
         }
     }
 }

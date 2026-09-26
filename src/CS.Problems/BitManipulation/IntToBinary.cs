@@ -17,7 +17,7 @@ namespace CS.Problems.BitManipulation
             for(int i = precision-1;i >=0; i--)
             {
                 stringBuilder.Insert(0, (integer & 1) == 0 ? "0" : "1");
-                integer >>= integer;
+                integer >>= 1;
             }
 
             return stringBuilder.ToString();
