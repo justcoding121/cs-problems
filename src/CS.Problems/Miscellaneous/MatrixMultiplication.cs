@@ -11,15 +11,17 @@ namespace CS.Problems.Miscellaneous
                 throw new Exception("Matrice A don't have same number of rows as the columns of matrix B.");
             }
 
-            var n = b.GetLength(0);
+            var rows = a.GetLength(0);
+            var cols = b.GetLength(1);
+            var shared = a.GetLength(1);
 
-            var result = new int[n, n];
+            var result = new int[rows, cols];
 
-            for (int i = 0; i < a.GetLength(0); i++)
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < b.GetLength(1); j++)
+                for (int j = 0; j < cols; j++)
                 {
-                    for (int k = 0; k < n; k++)
+                    for (int k = 0; k < shared; k++)
                     {
                         result[i, j] += a[i, k] * b[k, j];
                     }

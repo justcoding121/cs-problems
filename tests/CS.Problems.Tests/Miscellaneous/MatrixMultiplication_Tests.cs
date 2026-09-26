@@ -24,6 +24,20 @@ namespace CS.Problems.Tests.Miscellaneous
             Assert.AreEqual(4, result[0, 1]);
             Assert.AreEqual(6, result[1, 0]);
             Assert.AreEqual(8, result[1, 1]);
+
+            var A2 = new int[2, 3] { { 1, 2, 3 }, { 4, 5, 6 } };
+            var B2 = new int[3, 4] {
+                { 1, 0, 0, 0 },
+                { 0, 1, 0, 0 },
+                { 0, 0, 1, 0 }
+            };
+            var rectangular = MatrixMultiplication.Multiply(A2, B2);
+            Assert.AreEqual(2, rectangular.GetLength(0));
+            Assert.AreEqual(4, rectangular.GetLength(1));
+            Assert.AreEqual(1, rectangular[0, 0]);
+            Assert.AreEqual(2, rectangular[0, 1]);
+            Assert.AreEqual(3, rectangular[0, 2]);
+            Assert.AreEqual(0, rectangular[0, 3]);
         }
     }
 }
