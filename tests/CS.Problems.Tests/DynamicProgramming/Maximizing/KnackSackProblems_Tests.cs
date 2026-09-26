@@ -25,6 +25,19 @@ namespace CS.Problems.Tests.DynamicProgramming
 
             Assert.AreEqual(result, 180);
 
+            // cache key must separate capacity from item count
+            var manyWeights = new int[21];
+            var manyValues = new int[21];
+            manyWeights[0] = 11;
+            manyValues[0] = 100;
+            for (int i = 1; i < 21; i++)
+            {
+                manyWeights[i] = 1;
+                manyValues[i] = 1;
+            }
+            Assert.AreEqual(100, KnackSackProblems.KnackSack_10_Recursive(
+                11, manyWeights, manyValues, manyWeights.Length, new Dictionary<string, int>()));
+
         }
 
         /// <summary>
@@ -43,6 +56,10 @@ namespace CS.Problems.Tests.DynamicProgramming
             var result = KnackSackProblems.KnackSack_Fractional(W, weights, values);
 
             Assert.AreEqual(result, 220);
+
+            // unsorted ratios: prefer the higher ratio item first
+            Assert.AreEqual(80, KnackSackProblems.KnackSack_Fractional(
+                10, new int[] { 10, 5 }, new int[] { 60, 50 }));
         }
     }
 }

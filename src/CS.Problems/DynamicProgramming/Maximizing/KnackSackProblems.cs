@@ -16,7 +16,7 @@ namespace CS.Problems.DynamicProgramming
             int[] values, 
             int n, Dictionary<string, int> memozingCache)
         {
-            var cacheKey = W + string.Empty + n;
+            var cacheKey = W + "-" + n;
 
             if (memozingCache.ContainsKey(cacheKey))
             {
@@ -72,9 +72,17 @@ namespace CS.Problems.DynamicProgramming
                 {
                     if (ratios[i] < ratios[j])
                     {
+                        var tmpRatio = ratios[i];
                         ratios[i] = ratios[j];
+                        ratios[j] = tmpRatio;
+
+                        var tmpWeight = weights[i];
                         weights[i] = weights[j];
+                        weights[j] = tmpWeight;
+
+                        var tmpValue = values[i];
                         values[i] = values[j];
+                        values[j] = tmpValue;
                     }
                 }
             }
@@ -84,7 +92,7 @@ namespace CS.Problems.DynamicProgramming
             //O(n)
             int k = 0;
             //fill in the bag
-            while (true)
+            while (k < weights.Length && W > 0)
             {
                 var balanceWeight = W - weights[k];
 
