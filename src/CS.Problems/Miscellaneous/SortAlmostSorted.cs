@@ -23,14 +23,14 @@ namespace CS.Problems.Miscellaneous
                 throw new Exception("K cannot exceed array length.");
             }
 
-            var firstKElements = new int[k];
-            Array.Copy(input, firstKElements, k);
+            var firstKElements = new int[k + 1];
+            Array.Copy(input, firstKElements, k + 1);
 
             var minHeap = new BMinHeap<int>(firstKElements);
 
             var result = new List<int>();
 
-            for (int i = k; i < input.Length; i++)
+            for (int i = k + 1; i < input.Length; i++)
             {
                 result.Add(minHeap.ExtractMin());
                 minHeap.Insert(input[i]);

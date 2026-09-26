@@ -17,6 +17,9 @@ namespace CS.Problems.Tests.Miscellaneous
         {
             CollectionAssert.AreEqual(new int[] { 2, 3, 6, 8, 12, 56 },
                 SortAlmostSorted.Sort(new int[] { 2, 6, 3, 12, 56, 8 }, 3));
+
+            CollectionAssert.AreEqual(new int[] { 0, 1, 2, 3 },
+                SortAlmostSorted.Sort(new int[] { 3, 2, 1, 0 }, 3));
         }
     }
 }
