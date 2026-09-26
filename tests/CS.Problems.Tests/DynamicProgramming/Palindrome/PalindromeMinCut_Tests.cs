@@ -22,6 +22,8 @@ namespace CS.Problems.Tests.DynamicProgramming
                 = PalindromeMinCut.GetMinCut("ababbbabbababa");
 
             Assert.AreEqual(4, minPalindromePartitions.Count);
+
+            Assert.AreEqual(2, PalindromeMinCut.GetMinCut("ababaaba").Count);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CS.Problems.DynamicProgramming
@@ -17,98 +18,88 @@ namespace CS.Problems.DynamicProgramming
     {
         public static List<PalindromeInfo> GetMinCut(string input)
         {
-            var palindromes = new List<PalindromeInfo>();
-
-            FindLongestPalindrome(input, 0, input.Length - 1,
-                new Dictionary<string, int>(), palindromes);
-
-            palindromes = palindromes
-                            .OrderByDescending(x => x.j - x.i)
-                            .ToList();
+            var cache = new Dictionary<int, int>();
+            MinParts(input, 0, cache);
 
             var result = new List<PalindromeInfo>();
+            var start = 0;
 
-            while (palindromes.Count > 0)
+            while (start < input.Length)
             {
-                var current = palindromes.First();
-               
-                result.Add(new PalindromeInfo() {
-                    i = current.i,
-                    j = current.j
+                var bestParts = cache[start];
+                var bestEnd = start;
+
+                for (int end = start; end < input.Length; end++)
+                {
+                    if (!IsPalindrome(input, start, end))
+                    {
+                        continue;
+                    }
+
+                    var parts = 1 + (end + 1 < input.Length ? cache[end + 1] : 0);
+                    if (parts == bestParts)
+                    {
+                        bestEnd = end;
+                        break;
+                    }
+                }
+
+                result.Add(new PalindromeInfo()
+                {
+                    i = start,
+                    j = bestEnd
                 });
 
-                palindromes.RemoveAll(x => x.i >= current.i 
-                                && x.j <= current.j);
-
-                //remove overlaps
-                palindromes.RemoveAll(x => x.i >= current.i && x.i <= current.j);
-                palindromes.RemoveAll(x => x.j <= current.j && x.j >= current.i);
+                start = bestEnd + 1;
             }
 
-            return result.OrderBy(x => x.i).ToList();
+            return result;
         }
 
-        private static int FindLongestPalindrome(string input,
-            int i, int j,
-            Dictionary<string, int> cache,
-            List<PalindromeInfo> palindromes)
+        /// <summary>
+        /// Minimum number of palindromic parts for the suffix starting at start.
+        /// </summary>
+        private static int MinParts(string input, int start, Dictionary<int, int> cache)
         {
-            if (i > j)
+            if (start >= input.Length)
             {
                 return 0;
             }
 
-            if (i == j)
+            if (cache.ContainsKey(start))
             {
-                palindromes.Add(new PalindromeInfo()
-                {
-                    i = i,
-                    j = j
-                });
-
-                return 1;
+                return cache[start];
             }
 
-            var cacheKey = string.Concat(i, j);
+            var minParts = int.MaxValue;
 
-            if (cache.ContainsKey(cacheKey))
+            for (int end = start; end < input.Length; end++)
             {
-                return cache[cacheKey];
+                if (IsPalindrome(input, start, end))
+                {
+                    minParts = Math.Min(minParts, 1 + MinParts(input, end + 1, cache));
+                }
             }
 
-            var longestLengthA = 0;
+            cache.Add(start, minParts);
 
-            if (input[i] == input[j])
+            return minParts;
+        }
+
+        private static bool IsPalindrome(string input, int i, int j)
+        {
+            while (i < j)
             {
-                longestLengthA = FindLongestPalindrome(input, i + 1, j - 1, cache, palindromes);
-
-                //for continuity, verify that
-                //expected palindrome length between i & j match
-                //palindrome length
-                if (longestLengthA + 1 == j - i)
+                if (input[i] != input[j])
                 {
-                    longestLengthA = longestLengthA + 2;
-
-                    //keep track of palindromes 
-                    palindromes.Add(new PalindromeInfo()
-                    {
-                        i = i,
-                        j = j
-                    });
+                    return false;
                 }
 
+                i++;
+                j--;
             }
 
-            var longestLengthB = FindLongestPalindrome(input, i, j - 1, cache, palindromes);
-            var longestLengthC = FindLongestPalindrome(input, i + 1, j, cache, palindromes);
-
-            var results = new int[] { longestLengthA, longestLengthB, longestLengthC };
-
-            var longest = results.Max();
-
-            cache.Add(cacheKey, longest);
-
-            return longest;
+            return true;
         }
     }
 }
