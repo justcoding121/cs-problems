@@ -15,6 +15,7 @@ namespace CS.Problems.Tests.Miscellaneous
             Assert.AreEqual(2, SearchAlmostSorted.Search(test, 40));
             Assert.AreEqual(-1, SearchAlmostSorted.Search(test, 100));
 
+            Assert.AreEqual(3, SearchAlmostSorted.Search(new int[] { 3, 2, 10, 4, 40 }, 4));
         }
     }
 }

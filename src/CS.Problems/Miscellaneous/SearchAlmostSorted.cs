@@ -10,18 +10,8 @@
 
         private static int search(int[] input, int i, int j, int element)
         {
-            while (true)
+            while (i <= j)
             {
-                if (i == j)
-                {
-                    if (input[i] == element)
-                    {
-                        return i;
-                    }
-
-                    return -1;
-                }
-
                 var mid = (i + j) / 2;
 
                 if (input[mid] == element)
@@ -29,24 +19,27 @@
                     return mid;
                 }
 
-                if (mid > 0 && input[mid - 1] == element)
+                if (mid > i && input[mid - 1] == element)
                 {
                     return mid - 1;
                 }
 
-                if (mid < input.Length - 1 && input[mid + 1] == element)
+                if (mid < j && input[mid + 1] == element)
                 {
                     return mid + 1;
                 }
 
                 if (input[mid] > element)
                 {
-                    j = mid;
-                    continue;
+                    j = mid - 2;
                 }
-
-                i = mid + 1;
+                else
+                {
+                    i = mid + 2;
+                }
             }
+
+            return -1;
         }
     }
 }
