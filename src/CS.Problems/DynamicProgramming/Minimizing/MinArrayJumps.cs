@@ -46,7 +46,8 @@ namespace CS.Problems.DynamicProgramming.Minimizing
                 var subMin = GetMinJumps(input, i, cache);
 
                 //jump possible only if i + input[i] >=j
-                if (i + input[i] >= j
+                if (subMin != int.MaxValue
+                    && i + input[i] >= j
                     && subMin + 1 < localMin)
                 {
                     localMin = subMin + 1;

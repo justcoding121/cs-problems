@@ -19,6 +19,8 @@ namespace CS.Problems.Tests.DynamicProgramming.Minimizing
         public void MinArrayJumpsSmoke_Test()
         {
             Assert.AreEqual(3, MinArrayJumps.GetMinJumps(new int[] { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 }));
+
+            Assert.AreEqual(int.MaxValue, MinArrayJumps.GetMinJumps(new int[] { 0, 0, 1 }));
         }
     }
 }
