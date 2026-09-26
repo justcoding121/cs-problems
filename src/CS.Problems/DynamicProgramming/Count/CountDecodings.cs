@@ -28,19 +28,27 @@ namespace CS.Problems.DynamicProgramming
                 return cache[i];
             }
 
-            if (i <=1)
+            if (i == 0)
             {
                 return 1;
             }
 
-            //each digit corresponds to a char
-            var result = Count(input, i - 1, cache);
+            var result = 0;
 
-            //each two consecutive digits can also correspond to a char
-            //if it is less than 27
-            if (int.Parse(input.Substring(i - 2, 2)) < 27)
+            // single digit decode (1-9); 0 is invalid alone
+            if (input[i - 1] != '0')
             {
-                result += Count(input, i - 2, cache);
+                result += Count(input, i - 1, cache);
+            }
+
+            // two consecutive digits decode when in 10..26
+            if (i >= 2)
+            {
+                var twoDigit = int.Parse(input.Substring(i - 2, 2));
+                if (twoDigit >= 10 && twoDigit <= 26)
+                {
+                    result += Count(input, i - 2, cache);
+                }
             }
 
             cache.Add(i, result);

@@ -20,6 +20,10 @@ namespace CS.Problems.Tests.DynamicProgramming
             result = CountDecodings.Count("1234");
 
             Assert.AreEqual(3, result);
+
+            Assert.AreEqual(1, CountDecodings.Count("10"));
+            Assert.AreEqual(0, CountDecodings.Count("0"));
+            Assert.AreEqual(0, CountDecodings.Count("30"));
         }
     }
 }
