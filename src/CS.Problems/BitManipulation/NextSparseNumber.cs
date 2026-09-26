@@ -30,21 +30,16 @@ namespace CS.Problems.BitManipulation
             //start from second last bit i
             var mask = 1 << 1;
 
-            //set i to second last bit index
-            for (int i = 30; i >= 0; i--)
+            // walk mask from bit 1 upward
+            for (int bit = 1; bit <= 30; bit++)
             {
-                //if i-1==0 && i==1 && i+1==1
-                if ((x & (mask << 1)) == 0 && (x & mask) > 0 && (x & (mask >> 1)) > 0)
+                //if bit+1==0 && bit==1 && bit-1==1
+                if ((x & (mask << 1)) == 0 && (x & mask) != 0 && (x & (mask >> 1)) != 0)
                 {
-                    //erase all bits to the right of i including i
-                    var eraseMask = mask;
-                    for (int j = i; j >= 0; j--)
-                    {
-                        x = x & ~eraseMask;
-                        eraseMask >>= 1;
-                    }
+                    //erase all bits to the right of this 1 including this 1
+                    x = x & ~(mask | (mask - 1));
 
-                    //set i-1
+                    //set bit+1
                     x = x | (mask << 1);
                 }
 

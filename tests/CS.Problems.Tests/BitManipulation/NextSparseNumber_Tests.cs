@@ -25,6 +25,7 @@ namespace CS.Problems.Tests.BitManipulation
             Assert.AreEqual(4, NextSparseNumber.Next(4));
             Assert.AreEqual(40, NextSparseNumber.Next(38));
             Assert.AreEqual(64, NextSparseNumber.Next(44));
+            Assert.AreEqual(262144, NextSparseNumber.Next(196609));
         }
     }
 }
